@@ -1,13 +1,11 @@
-/** @type {import('tailwindcss').Config} */
-const sharedConfig = require("ui/tailwind.config.js");
+// import type { Config } from "tailwindcss";
+// import sharedConfig from "@repo/tailwind-config";
 
-module.exports = {
-  ...sharedConfig,
-  content: [
-    // "./pages/**/*.{js,ts,jsx,tsx}",
-    // "./components/**/*.{js,ts,jsx,tsx}",
-    // "../../packages/ui/**/*.{js,ts,jsx,tsx}", // Include UI package
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-};
+// const config: Pick<Config, "content" | "presets"> = {
+//   content: ["./src/app/**/*.tsx"],
+//   presets: [sharedConfig],
+// };
+
+// export default config;
+
+// // need to fix Config

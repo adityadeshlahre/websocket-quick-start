@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "esbuild ./src/index.ts --bundle --platform=node --target=node18 --outfile=./dist/index.js",
+    "build": "tsc -b",
     "dev": "node ./dist/index.js",
     "lint": "eslint ."
   },
@@ -19,7 +19,6 @@
     "@typescript-eslint/eslint-plugin": "^8.3.0",
     "@typescript-eslint/parser": "^8.3.0",
     "body-parser": "^1.20.2",
-    "esbuild": "^0.23.1",
     "eslint": "^9.9.1",
     "express": "^4.19.2",
     "globals": "^15.9.0",
@@ -28,7 +27,7 @@
     "typescript-eslint": "^8.0.1"
   },
   "dependencies": {
-    "@repo/typescript-config": "workspace:*",
-    "@repo/eslint-config": "workspace:*"
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*"
   }
 }

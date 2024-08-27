@@ -1,0 +1,13 @@
+{
+  "name": "types",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "zod": "^3.23.8",
+    "@repo/typescript-config": "workspace:*"
+  }
+}
