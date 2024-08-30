@@ -7,8 +7,11 @@
     "dev:server": "turbo run dev --filter=server",
     "dev": "turbo run dev",
     "lint": "turbo lint",
+    "db:generate": "cd ./packages/db/ && prisma generate --schema=./prisma/schema.prisma",
+    "db:studio": "cd ./packages/db/ && prisma studio --schema=./prisma/schema.prisma",
+    "db:migrate": "prisma migrate dev --schema=./packages/db/prisma/schema.prisma",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "rm -rf ./node_modules && rm -rf ./packages/ui/node_modules && rm -rf ./apps/node_modules && rm -rf ./apps/server/node_modules && rm -rf ./apps/web/node_modules"
+    "clean": "rm -rf ./node_modules && rm -rf ./packages/ui/node_modules && rm -rf ./apps/node_modules && rm -rf ./apps/server/node_modules && rm -rf ./apps/web/node_modules && rm -rf ./packages/db/node_modules"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
