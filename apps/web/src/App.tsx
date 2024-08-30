@@ -1,10 +1,18 @@
-import { Button } from "@repo/ui/button";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Landing from "./pages/Landing";
+import Form from "./pages/Form";
 
 function App() {
   return (
     <>
-      <Button appName={"Hello"}>sdifjsd</Button>
-      <div className="text-2xl text-lime-400">Hi There</div>
+      <div>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/form" element={<Form />} />
+          </Routes>
+        </Router>
+      </div>
     </>
   );
 }

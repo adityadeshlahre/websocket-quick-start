@@ -1,10 +1,10 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "./dist/index.js",
+  "main": "index.ts",
   "scripts": {
     "build": "tsc -b",
-    "dev": "node ./dist/index.js",
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
     "lint": "eslint ."
   },
   "keywords": [],
@@ -13,21 +13,22 @@
   "description": "",
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/types": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^22.5.0",
     "@typescript-eslint/eslint-plugin": "^8.3.0",
     "@typescript-eslint/parser": "^8.3.0",
     "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "eslint": "^9.9.1",
     "express": "^4.19.2",
     "globals": "^15.9.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1"
-  },
-  "dependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*"
   }
 }
