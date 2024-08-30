@@ -1,5 +1,53 @@
-# Turborepo starter
+## quick ts starter
 
+This is my personal prefered stack for for starting simple full stack projects in one go. Initalized with turborepo in furhter i have added all the stacks along the way.
+
+> [!IMPORTANT]  
+> This is using `pnpm` as package manager.
+
+### Tech Stack
+
+- [x] React JS (Vite as initializer)
+- [x] Node/Express Js
+- [x] TailwindCSS
+- [x] Recoil
+- [x] Axios
+- [x] Prisma
+- [x] Zod
+
+### Insider
+
+```
+"apps/web" this web(react app) folder is initializes using VITE [backedn]
+```
+
+```
+"apps/server" this server(node app) folder is initializes using VITE [frontend]
+```
+
+```
+packages{folder}
+    | ui{reusable frontend componenets}
+    | types{types to use in both frontend and backend}
+    | db{prisma schema is here and singaltion connection client is init}
+```
+
+### To-Do Lits
+
+- [ ] ESLinting
+- [ ] Lint Stage
+- [ ] husky
+- [ ] Docker
+- [ ] CI (to build and push image)
+- [ ] CommitLint
+
+#### Thank You
+
+<details>
+
+<summary>Turborepo starter</summary>
+
+````markdown
 This is an official starter Turborepo.
 
 ## Using this example
@@ -79,3 +127,6 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+````
+
+</details>
