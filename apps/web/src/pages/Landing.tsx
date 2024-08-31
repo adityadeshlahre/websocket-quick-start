@@ -1,9 +1,13 @@
+import { Button } from "@repo/ui/button";
 import React from "react";
 
 const Landing: React.FC = () => {
   return (
     <>
-      <div className="text-lg">Landing</div>
+      <div className="text-8xl">Landing</div>
+      <Button appName="sdf" className="text-5xl bg-lime-900">
+        asdf
+      </Button>
     </>
   );
 };

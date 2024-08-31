@@ -118,12 +118,12 @@ importers:
       '@eslint/js':
         specifier: ^9.9.0
         version: 9.9.1
-      '@repo/config-tailwind':
-        specifier: workspace:*
-        version: link:../../packages/config-tailwind
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
+      '@repo/tailwind-config':
+        specifier: workspace:*
+        version: link:../../packages/tailwind-config
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
@@ -170,21 +170,6 @@ importers:
         specifier: ^5.4.1
         version: 5.4.2(@types/node@22.5.1)
 
-  packages/config-tailwind:
-    devDependencies:
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.20(postcss@8.4.41)
-      postcss:
-        specifier: ^8.4.41
-        version: 8.4.41
-      tailwindcss:
-        specifier: ^3.4.10
-        version: 3.4.10(ts-node@10.9.2(@types/node@22.5.1)(typescript@5.5.4))
-
   packages/db:
     dependencies:
       '@prisma/client':
@@ -225,6 +210,21 @@ importers:
         specifier: ^5.3.3
         version: 5.5.4
 
+  packages/tailwind-config:
+    devDependencies:
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.20(postcss@8.4.41)
+      postcss:
+        specifier: ^8.4.41
+        version: 8.4.41
+      tailwindcss:
+        specifier: ^3.4.10
+        version: 3.4.10(ts-node@10.9.2(@types/node@22.5.1)(typescript@5.5.4))
+
   packages/types:
     dependencies:
       zod:
@@ -243,12 +243,12 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1
     devDependencies:
-      '@repo/config-tailwind':
-        specifier: workspace:*
-        version: link:../config-tailwind
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
+      '@repo/tailwind-config':
+        specifier: workspace:*
+        version: link:../tailwind-config
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config

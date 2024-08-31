@@ -1,4 +1,4 @@
-// module.exports = require("@repo/config-tailwind/postcss.config");
+// module.exports = require("@repo/tailwind-config/postcss.config");
 
 // export const plugins = {
 //   tailwindcss: {},
