@@ -7,12 +7,11 @@ module.exports = {
     project: "./tsconfig.lint.json",
     tsconfigRootDir: __dirname,
   },
-  overrides: [
-    {
-      files: ["postcss.config.js", "tailwind.config.ts"],
-      parserOptions: {
-        project: null,
-      },
-    },
+  ignorePatterns: [
+    "postcss.config.js",
+    "tailwind.config.ts",
+    "node_modules",
+    ".eslintrc.cjs",
   ],
+  parser: "@typescript-eslint/parser",
 };

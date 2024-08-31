@@ -34,10 +34,10 @@ packages{folder}
 
 ### To-Do Lits
 
-- [ ] ESLinting
-- [ ] Lint Stage
-- [ ] husky
-- [ ] Docker
+- [x] ESLinting
+- [x] Lint Stage
+- [x] husky
+- [x] Docker
 - [ ] CI (to build and push image)
 - [ ] CommitLint
 
