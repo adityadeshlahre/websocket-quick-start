@@ -2,6 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.ts",
+  "type": "module",
   "scripts": {
     "build": "tsc -b",
     "dev": "nodemon --watch src --exec ts-node src/index.ts",

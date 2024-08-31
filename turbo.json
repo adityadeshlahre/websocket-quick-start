@@ -17,10 +17,10 @@
       "outputs": []
     },
     "db:generate": {
-      "cache": false
+      "cache": true
     },
     "db:push": {
-      "cache": false
+      "cache": true
     }
   }
 }

@@ -7,4 +7,12 @@ module.exports = {
     project: "./tsconfig.lint.json",
     tsconfigRootDir: __dirname,
   },
+  overrides: [
+    {
+      files: ["postcss.config.js", "tailwind.config.ts"],
+      parserOptions: {
+        project: null,
+      },
+    },
+  ],
 };
