@@ -4,7 +4,7 @@ import React from "react";
 const Landing: React.FC = () => {
   return (
     <>
-      <div className="text-8xl">Landing</div>
+      <div className="text-8xl">Landingasdfasd</div>
       <Button appName="sdf" className="text-5xl bg-lime-900">
         asdf
       </Button>

@@ -7,7 +7,7 @@
     "dev:server": "turbo run dev --filter=server",
     "dev": "turbo run dev",
     "lint": "turbo lint",
-    "db:generate": "cd ./packages/db/ && prisma generate --schema=./prisma/schema.prisma",
+    "db:generate": "prisma generate --schema=./packages/db/prisma/schema.prisma",
     "db:studio": "prisma studio --schema=./packages/db/prisma/schema.prisma",
     "db:migrate": "prisma migrate dev --schema=./packages/db/prisma/schema.prisma",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
