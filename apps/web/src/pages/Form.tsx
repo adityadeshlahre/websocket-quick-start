@@ -32,18 +32,24 @@ const Form = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        className="border-2 border-neutral-900"
         type="text"
         value={name}
+        placeholder="name"
         onChange={(e) => setName(e.target.value)}
       />
       <input
+        className="border-2 border-neutral-900"
         type="email"
         value={email}
+        placeholder="email"
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
+        className="border-2 border-neutral-900"
         type="password"
         value={password}
+        placeholder="password"
         onChange={(e) => setPassword(e.target.value)}
       />
       <button type="submit">Submit</button>

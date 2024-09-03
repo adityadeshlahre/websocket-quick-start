@@ -40,6 +40,8 @@ packages{folder}
 - [x] Docker
 - [ ] CI (to build and push image)
 - [ ] CommitLint
+- [ ] centeralized ENV
+- [ ] nodeSever{node dist/index.js} need to fix
 
 #### Thank You
 

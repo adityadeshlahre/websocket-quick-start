@@ -33,7 +33,6 @@
     "typescript-eslint": "^8.0.1"
   },
   "dependencies": {
-    "@repo/db": "workspace:*",
-    "dotenv": "^16.4.5"
+    "@repo/db": "workspace:*"
   }
 }

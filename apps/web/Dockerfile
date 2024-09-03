@@ -1,4 +1,4 @@
-FROM node:alpine AS base
+FROM node:22-alpine AS base
 
 FROM base AS builder
 ENV PNPM_HOME="/root/.local/share/pnpm"
@@ -8,7 +8,7 @@ WORKDIR /app
 RUN npm install --global pnpm@latest
 RUN pnpm add -g turbo
 COPY . .
-RUN turbo prune web --docker
+RUN turbo prune --scope=web --docker
 
 # Add lockfile and package.json's of isolated subworkspace
 FROM base AS installer

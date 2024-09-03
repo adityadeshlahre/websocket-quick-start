@@ -1,4 +1,4 @@
-FROM node:alpine AS base
+FROM node:22-alpine AS base
 
 FROM base AS builder
 ENV PNPM_HOME="/root/.local/share/pnpm"
@@ -8,7 +8,7 @@ WORKDIR /app
 RUN npm install --global pnpm@latest
 RUN pnpm add -g turbo nodemon
 COPY . .
-RUN turbo prune server --docker
+RUN turbo prune --scope=server --docker
 
 # Add lockfile and package.json's of isolated subworkspace
 FROM base AS installer
@@ -16,7 +16,7 @@ FROM base AS installer
 ENV PNPM_HOME="/root/.local/share/pnpm"
 ENV PATH="${PATH}:${PNPM_HOME}"
 
-RUN npm install --global pnpm@latest
+RUN npm install --global pnpm@latest 
 
 WORKDIR /app
 
@@ -38,6 +38,8 @@ ENV PATH="${PATH}:${PNPM_HOME}"
 
 RUN npm install --global pnpm@latest
 
+RUN pnpm add -g nodemon
+
 WORKDIR /app
 
 # Don't run production as root
@@ -46,6 +48,8 @@ WORKDIR /app
 # USER nodejs
 COPY --from=installer /app .
 
+ENV PORT 3000
+
 EXPOSE 3000
 
-CMD cd apps/server/ && pnpm start
+CMD cd apps/server/ && pnpm dev
