@@ -1,4 +1,4 @@
-import { User, UserSchema } from "@repo/types/src/index";
+import { User, UserSchema } from "@repo/types/";
 import axios from "axios";
 import { useState } from "react";
 

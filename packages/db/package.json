@@ -2,20 +2,21 @@
   "name": "@repo/db",
   "version": "1.0.0",
   "main": "src/index.ts",
-  "keywords": [],
+  "types": "src/index.ts",
   "author": "",
   "license": "ISC",
   "description": "",
   "scripts": {
-    "db:generate": "prisma generate --schema=./prisma/schema.prisma",
-    "db:migrate": "prisma migrate dev --schema=./prisma/schema.prisma",
-    "db:push": "prisma db push --schema=./prisma/schema.prisma --skip-generate",
-    "db:studio": "prisma studio --schema=./prisma/schema.prisma",
+    "db:generate": "dotenv -e ./../../.env -- prisma generate --schema=./prisma/schema.prisma",
+    "db:migrate": "dotenv -e ./../../.env -- prisma migrate dev --schema=./prisma/schema.prisma",
+    "db:push": "dotenv -e ./../../.env -- prisma db push --schema=./prisma/schema.prisma --skip-generate",
+    "db:studio": "dotenv -e ./../../.env -- prisma studio --schema=./prisma/schema.prisma",
     "format": "prisma format",
     "dev": "pnpm db:generate && pnpm db:migrate"
   },
   "dependencies": {
-    "@prisma/client": "^5.19.0"
+    "@prisma/client": "^5.19.0",
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",

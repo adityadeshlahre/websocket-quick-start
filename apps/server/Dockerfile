@@ -18,6 +18,8 @@ ENV PATH="${PATH}:${PNPM_HOME}"
 
 RUN npm install --global pnpm@latest 
 
+RUN pnpm add -g turbo nodemon dotenv dotenv-cli
+
 WORKDIR /app
 
 # First install dependencies (as they change less often)
@@ -38,7 +40,7 @@ ENV PATH="${PATH}:${PNPM_HOME}"
 
 RUN npm install --global pnpm@latest
 
-RUN pnpm add -g nodemon
+RUN pnpm add -g nodemon dotenv dotenv-cli
 
 WORKDIR /app
 
@@ -47,8 +49,6 @@ WORKDIR /app
 # RUN useradd --system --uid 1001 nodejs
 # USER nodejs
 COPY --from=installer /app .
-
-ENV PORT 3000
 
 EXPOSE 3000
 

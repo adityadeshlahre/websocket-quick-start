@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import { User, UserSchema } from '@repo/types/src/';
+import { User, UserSchema } from '@repo/types';
 import { prisma } from '@repo/db';
 
 const app = express();

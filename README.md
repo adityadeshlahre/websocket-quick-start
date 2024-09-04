@@ -42,6 +42,53 @@ packages{folder}
 - [ ] CommitLint
 - [ ] centeralized ENV
 - [ ] nodeSever{node dist/index.js} need to fix
+- [ ] cleanup
+
+### Getting Started
+
+```bash
+bun create next-app -e "https://github.com/adityadeshlahre/quick-start" <project-name>
+
+npx create-next-app -e "https://github.com/adityadeshlahre/quick-start" <project-name>
+```
+
+<p align="center" style="font-weight: bold;">OR</p>
+
+**Install `degit` globally**
+
+```bash
+bun i -g degit || pnpm i -g degit || yarn global add degit || npm i -g degit
+```
+
+**Create a new project from this template**
+
+```bash
+degit adityadeshlahre/quick-start <project-name>
+# using GH cli
+gh repo create <project-name> --template <adityadeshlahre>/<quick-start> --public
+
+cd <project-name>
+```
+
+**Install dependencies**
+
+```bash
+bun i || pnpm i || yarn || npm i
+```
+
+**Initialize a new git repository _(Optional)_:**
+
+```bash
+git init
+git add .
+git commit --no-verify -m "init"
+```
+
+## After Installation Checklist
+
+- [ ] Update `package.json` with your project details.
+- [ ] Update `README.md` with your project details.
+- [ ] Update `LICENSE` with your name and year.
 
 #### Thank You
 

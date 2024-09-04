@@ -36,7 +36,7 @@ FROM base AS runner
 ENV PNPM_HOME="/root/.local/share/pnpm"
 ENV PATH="${PATH}:${PNPM_HOME}"
 
-RUN npm install --global pnpm@8.7.5
+RUN npm install --global pnpm@latest
 
 WORKDIR /app
 
