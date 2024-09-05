@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: ./apps/web/Dockerfile.build
+    image: quick-start-web:latest
     container_name: quick-start-web
     expose:
       - 5173
@@ -21,6 +22,7 @@ services:
     build:
       context: .
       dockerfile: ./apps/server/Dockerfile.build
+    image: quick-start-server:latest
     container_name: quick-start-server
     expose:
       - 3000
