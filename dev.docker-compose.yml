@@ -22,7 +22,6 @@ services:
       context: .
       dockerfile: ./apps/server/Dockerfile
     container_name: quick-start-server
-    env_file: ".env"
     expose:
       - 3000
     ports:
