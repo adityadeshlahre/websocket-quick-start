@@ -3,44 +3,44 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "npm"
     directory: "/apps/server/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "npm"
     directory: "/apps/web/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "npm"
     directory: "/packages/ui/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "npm"
     directory: "/packages/eslint-config/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "npm"
     directory: "/packages/tailwind-config/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "npm"
     directory: "/packages/types/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "npm"
     directory: "/packages/typescript-config/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
   - package-ecosystem: "npm"
     directory: "/packages/db/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
