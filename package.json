@@ -11,7 +11,7 @@
     "lint": "turbo lint",
     "db:generate": "prisma generate --schema=./packages/db/prisma/schema.prisma",
     "db:studio": "prisma studio --schema=./packages/db/prisma/schema.prisma",
-    "db:migrate": "prisma migrate dev --schema=./packages/db/prisma/schema.prisma",
+    "db:migrate": "prisma migrate deploy --schema=./packages/db/prisma/schema.prisma",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "rm -rf ./node_modules && rm -rf ./packages/ui/node_modules && rm -rf ./apps/node_modules && rm -rf ./apps/server/node_modules && sudo rm -rf ./apps/web/node_modules && rm -rf ./packages/db/node_modules && rm -rf ./packages/types/node_modules && rm -rf ./packages/tailwind-config/node_modules && rm -rf ./packages/eslint-config/node_modules",
     "prepare": "husky"
