@@ -41,4 +41,4 @@ yarn-error.log*
 pnpm-lock.yaml
 
 #migrations
-migrations
+# migrations
