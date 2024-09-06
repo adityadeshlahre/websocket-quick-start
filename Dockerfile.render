@@ -53,4 +53,4 @@ EXPOSE 5173
 
 # CMD ["sh", "-c", "concurrently 'pnpm db:generate && pnpm db:migrate' 'cd apps/server && pnpm dev' 'cd apps/web && pnpm dev'"]
 
-CMD ["sh", "-c", "pnpm db:generate && pnpm db:push && pnpm db:deploy && concurrently 'cd apps/server && pnpm dev' 'cd apps/web && pnpm dev'"]
+CMD ["sh", "-c", "pnpm db:generate && pnpm db:push && pnpm db:resolve && pnpm db:deploy && concurrently 'cd apps/server && pnpm dev' 'cd apps/web && pnpm dev'"]
