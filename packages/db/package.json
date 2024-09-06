@@ -12,8 +12,8 @@
     "db:push": "dotenv -e ./../../.env -- prisma db push --schema=./prisma/schema.prisma --skip-generate",
     "db:studio": "dotenv -e ./../../.env -- prisma studio --schema=./prisma/schema.prisma",
     "format": "prisma format",
-    "dev": "pnpm db:generate && db:push && pnpm db:migrate",
-    "start": "pnpm db:generate && db:push && pnpm db:migrate"
+    "dev": "pnpm db:generate && pnpm db:push && pnpm db:migrate",
+    "start": "pnpm db:generate && pnpm db:push && pnpm db:migrate"
   },
   "dependencies": {
     "@prisma/client": "^5.19.0",
