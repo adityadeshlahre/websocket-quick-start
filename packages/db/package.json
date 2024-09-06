@@ -8,12 +8,13 @@
   "description": "",
   "scripts": {
     "db:generate": "dotenv -e ./../../.env -- prisma generate --schema=./prisma/schema.prisma",
-    "db:migrate": "dotenv -e ./../../.env -- prisma migrate --schema=./prisma/schema.prisma",
+    "db:migrate": "dotenv -e ./../../.env -- prisma migrate dev --schema=./prisma/schema.prisma",
+    "db:deploy": "dotenv -e ./../../.env -- prisma migrate deploy --schema=./prisma/schema.prisma",
     "db:push": "dotenv -e ./../../.env -- prisma db push --schema=./prisma/schema.prisma --skip-generate",
     "db:studio": "dotenv -e ./../../.env -- prisma studio --schema=./prisma/schema.prisma",
     "format": "prisma format",
     "dev": "pnpm db:generate && pnpm db:push && pnpm db:migrate",
-    "start": "pnpm db:generate && pnpm db:push && pnpm db:migrate"
+    "start": "pnpm db:generate && pnpm db:push && pnpm db:deploy"
   },
   "dependencies": {
     "@prisma/client": "^5.19.0",
