@@ -52,14 +52,11 @@ COPY --from=installer /app .
 
 EXPOSE 3000
 
-CMD ["pnpm","db:generate"]
-
-CMD ["pnpm","db:push"]
-
-CMD ["pnpm","db:resolve"]
-
-CMD ["pnpm","db:deploy"]
-
-WORKDIR /app/apps/server
-
-CMD ["pnpm", "dev"]
+CMD sh -c "
+   pnpm db:generate &&
+   pnpm db:push &&
+   pnpm db:resolve &&
+   pnpm db:deploy &&
+   cd /app/apps/server &&
+   pnpm dev
+"
