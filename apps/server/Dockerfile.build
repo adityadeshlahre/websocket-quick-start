@@ -40,7 +40,7 @@ ENV PATH="${PATH}:${PNPM_HOME}"
 
 RUN npm install --global pnpm@latest
 
-RUN pnpm add -g nodemon dotenv dotenv-cli
+RUN pnpm add -g turbo concurrently nodemon dotenv dotenv-cli prisma
 
 WORKDIR /app
 
@@ -52,11 +52,4 @@ COPY --from=installer /app .
 
 EXPOSE 3000
 
-CMD sh -c "
-   pnpm db:generate &&
-   pnpm db:push &&
-   pnpm db:resolve &&
-   pnpm db:deploy &&
-   cd /app/apps/server &&
-   pnpm dev
-"
+CMD ["sh", "-c", "pnpm db:generate && pnpm db:push && pnpm db:resolve && pnpm db:deploy && concurrently 'pnpm dev'"]
