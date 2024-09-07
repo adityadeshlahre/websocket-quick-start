@@ -12,6 +12,8 @@ services:
       - ./apps/web/:/app/apps/web
     environment:
       - DATABASE_URL=postgresql://opensource:sourceopen@postgres:5432/fasoshop
+      - PORT=3000
+      - UI_PORT=5173
     depends_on:
       - postgres
     networks:
@@ -22,7 +24,6 @@ services:
       context: .
       dockerfile: ./apps/server/Dockerfile.prod
     container_name: quick-start-server-prod
-    env_file: ".env"
     expose:
       - 3000
     ports:
@@ -31,6 +32,8 @@ services:
       - ./apps/server/:/app/apps/server
     environment:
       - DATABASE_URL=postgresql://opensource:sourceopen@postgres:5432/fasoshop
+      - PORT=3000
+      - UI_PORT=5173
     depends_on:
       - postgres
     networks:

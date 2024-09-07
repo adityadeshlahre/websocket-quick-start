@@ -92,6 +92,10 @@ git commit --no-verify -m "init"
 
 #### Thank You
 
+- DATABASE_URL="" //any postgress database
+- PORT=3000
+- UI_PORT=5173
+
 <details>
 
 <summary>Turborepo starter</summary>

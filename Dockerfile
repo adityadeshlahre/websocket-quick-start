@@ -50,7 +50,7 @@ COPY --from=installer /app .
 
 RUN apk add --no-cache nginx
 
-COPY render.nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
 EXPOSE 3000

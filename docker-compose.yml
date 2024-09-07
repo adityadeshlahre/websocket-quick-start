@@ -2,7 +2,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile.render
+      dockerfile: Dockerfile
     image: quick-start-full:latest
     container_name: quick-start-full
     expose:

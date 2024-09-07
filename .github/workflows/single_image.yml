@@ -6,7 +6,7 @@ on:
 
 jobs:
   push_to_registry:
-    name: (render) Build and Push Images 2 DHUB
+    name: (single_image) Build and Push Images 2 DHUB
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
@@ -28,7 +28,7 @@ jobs:
 
       - name: Build Docker images using Docker Compose
         run: |
-          docker-compose -f render.docker-compose.yml build
+          docker-compose -f docker-compose.yml build
 
       - name: web-server-build-full
         run: |
