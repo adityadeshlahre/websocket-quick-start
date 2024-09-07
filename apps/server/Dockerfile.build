@@ -52,4 +52,4 @@ COPY --from=installer /app .
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "pnpm db:generate && pnpm db:push && pnpm db:resolve && pnpm db:deploy && concurrently 'pnpm dev'"]
+CMD ["sh", "-c", "pnpm db:generate && pnpm db:push && pnpm db:resolve && pnpm db:deploy & concurrently 'cd apps/server && pnpm dev'"]

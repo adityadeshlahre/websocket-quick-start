@@ -90,6 +90,17 @@ git commit --no-verify -m "init"
 - [ ] Update `README.md` with your project details.
 - [ ] Update `LICENSE` with your name and year.
 
+### Docker Infos
+
+- [x] dev.docker-compose.yml
+- [x] build.docker-compose.yml
+- [x] prod.docker-compose.yml
+- [x] docker-compose.yml
+
+### Top Level nginx file added
+
+- top level testing script
+
 #### Thank You
 
 - DATABASE_URL="" //any postgress database
