@@ -38,7 +38,7 @@ packages{folder}
 - [x] Lint Stage
 - [x] husky
 - [x] Docker
-- [ ] CI (to build and push image)
+- [x] CI (to build and push image also run in render)
 - [ ] CommitLint
 - [ ] centeralized ENV
 - [ ] nodeSever{node dist/index.js} need to fix
@@ -92,20 +92,28 @@ git commit --no-verify -m "init"
 
 ### Docker Infos
 
-- [x] dev.docker-compose.yml
-- [x] build.docker-compose.yml
-- [x] prod.docker-compose.yml
-- [x] docker-compose.yml
+- [x] dev.docker-compose.yml (run this if you want to do development without and hustule in you localsetup)
+- [x] build.docker-compose.yml (this is just to build image and push to docker hub )
+- [x] prod.docker-compose.yml (this production build if you have vps JUST pull this tempelate from github and run this in your vps)
+- [x] docker-compose.yml (this is top level docker file which will build full application image [no use as of now])
+
+> Don't know why i have created this much docker files
+
+### ENV's
+
+> [!NOTE]  
+> if you are deploying VPS or RENDER make sure set below variables
+
+> - DATABASE_URL="" //any postgress database
+> - PORT=3000
+> - UI_PORT=5173
+> - SERVER_URL="" //put your render server url
 
 ### Top Level nginx file added
 
 - top level testing script
 
 #### Thank You
-
-- DATABASE_URL="" //any postgress database
-- PORT=3000
-- UI_PORT=5173
 
 <details>
 
