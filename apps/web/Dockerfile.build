@@ -48,4 +48,6 @@ COPY --from=installer /app .
 
 EXPOSE 5173
 
-CMD ["cd apps/web/ && pnpm dev"]
+WORKDIR /app/apps/web
+
+CMD ["pnpm", "dev"]

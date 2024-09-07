@@ -52,4 +52,6 @@ COPY --from=installer /app .
 
 EXPOSE 3000
 
-CMD ["cd apps/server/ && pnpm dev"]
+WORKDIR /app/apps/server
+
+CMD ["pnpm", "dev"]
