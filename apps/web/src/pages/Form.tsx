@@ -1,6 +1,7 @@
 import { User, UserSchema } from "@repo/types/";
 import axios from "axios";
 import { useState } from "react";
+import { SERVER_URL } from "../utils/base";
 
 const Form = () => {
   const [name, setName] = useState<string>("");
@@ -19,7 +20,7 @@ const Form = () => {
     const user: User = result.data;
 
     axios
-      .post("http://localhost:3000/user", {
+      .post(`${SERVER_URL}/user`, {
         name: user.name,
         email: user.email,
         password: user.password,

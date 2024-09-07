@@ -52,6 +52,14 @@ COPY --from=installer /app .
 
 EXPOSE 3000
 
+CMD ["pnpm","db:generate"]
+
+CMD ["pnpm","db:push"]
+
+CMD ["pnpm","db:resolve"]
+
+CMD ["pnpm","db:deploy"]
+
 WORKDIR /app/apps/server
 
 CMD ["pnpm", "dev"]
