@@ -5,7 +5,7 @@
   "types": "src/index.ts",
   "scripts": {
     "build": "esbuild ./src/index.ts --bundle --platform=node --outfile=dist/index.js",
-    "start": "dotenv -e ./../../../.env -- pnpm clean && pnpm build && node ./dist/index.js",
+    "start": "pnpm clean && pnpm build && dotenv -e ./../../../.env -- node ./dist/index.js",
     "dev": "dotenv -e ./../../.env -- nodemon --watch src --ext ts --exec ts-node src/index.ts",
     "clean": "rm -rf dist",
     "lint": "eslint src/"
@@ -15,25 +15,25 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@eslint/js": "^9.9.0",
+    "@eslint/js": "^9.10.0",
     "@repo/eslint-config": "workspace:*",
     "@repo/types": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/body-parser": "^1.19.5",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
-    "@types/node": "^22.5.0",
-    "@typescript-eslint/eslint-plugin": "^8.3.0",
-    "@typescript-eslint/parser": "^8.3.0",
+    "@types/node": "^22.5.4",
+    "@typescript-eslint/eslint-plugin": "^8.4.0",
+    "@typescript-eslint/parser": "^8.4.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "esbuild": "^0.23.1",
-    "eslint": "^9.9.1",
+    "eslint": "^9.10.0",
     "express": "^4.19.2",
     "globals": "^15.9.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.0.1"
+    "typescript-eslint": "^8.4.0"
   },
   "dependencies": {
     "@repo/db": "workspace:*"

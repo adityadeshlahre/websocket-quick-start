@@ -17,13 +17,13 @@
     "start": "pnpm db:generate && pnpm db:push && pnpm db:deploy"
   },
   "dependencies": {
-    "@prisma/client": "^5.19.0",
+    "@prisma/client": "^5.19.1",
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22.5.1",
-    "prisma": "^5.19.0"
+    "@types/node": "^22.5.4",
+    "prisma": "^5.19.1"
   },
   "exports": {
     ".": "./src/index.ts"
