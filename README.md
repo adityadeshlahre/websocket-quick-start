@@ -39,8 +39,8 @@ packages{folder}
 - [x] husky
 - [x] Docker
 - [x] CI (to build and push image also run in render)
-- [ ] CommitLint
-- [ ] centeralized ENV
+- [x] CommitLint
+- [x] centeralized ENV
 - [ ] nodeSever{node dist/index.js} need to fix
 - [ ] cleanup
 
