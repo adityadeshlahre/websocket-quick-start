@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "types": "src/index.ts",
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "scripts": {
     "db:generate": "dotenv -e ./../../.env -- prisma generate --schema=./prisma/schema.prisma",
     "db:migrate": "dotenv -e ./../../.env -- prisma migrate dev --schema=./prisma/schema.prisma",
@@ -17,13 +14,13 @@
     "start": "pnpm db:generate && pnpm db:push && pnpm db:deploy"
   },
   "dependencies": {
-    "@prisma/client": "^5.19.1",
+    "@prisma/client": "^5.20.0",
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22.5.4",
-    "prisma": "^5.19.1"
+    "@types/node": "^22.7.1",
+    "prisma": "^5.20.0"
   },
   "exports": {
     ".": "./src/index.ts"

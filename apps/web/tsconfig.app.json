@@ -19,6 +19,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
+    // "paths": {
+    //   "ui": ["./../../packages/ui/"]
+    // } // this might be needed
   },
   "include": ["src"]
 }
