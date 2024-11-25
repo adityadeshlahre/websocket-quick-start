@@ -37,8 +37,5 @@ yarn-error.log*
 .DS_Store
 *.pem
 
-#lock
-pnpm-lock.yaml
-
 #migrations
 # migrations

@@ -17,7 +17,7 @@
     "db:resolve": "prisma migrate resolve --schema=./packages/db/prisma/schema.prisma --applied 20240906204550_init",
     "db:deploy": "prisma migrate deploy --schema=./packages/db/prisma/schema.prisma",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "rm -rf ./node_modules && rm -rf ./packages/ui/node_modules && rm -rf ./apps/node_modules && rm -rf ./apps/server/node_modules && sudo rm -rf ./apps/web/node_modules && rm -rf ./packages/db/node_modules && rm -rf ./packages/types/node_modules && rm -rf ./packages/tailwind-config/node_modules && rm -rf ./packages/eslint-config/node_modules",
+    "clean": "rimraf ./node_modules ./packages/ui/node_modules ./apps/node_modules ./apps/server/node_modules ./apps/web/node_modules ./packages/db/node_modules ./packages/types/node_modules ./packages/tailwind-config/node_modules ./packages/eslint-config/node_modules",
     "prepare": "husky"
   },
   "devDependencies": {
@@ -28,6 +28,7 @@
     "husky": "^9.1.6",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.13",
     "turbo": "^2.1.2",
     "typescript": "^5.6.2"
