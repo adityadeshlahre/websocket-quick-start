@@ -14,6 +14,7 @@
     "db:studio": "npx prisma studio --schema=./packages/db/prisma/schema.prisma",
     "db:push": "npx prisma db push --schema=./packages/db/prisma/schema.prisma --skip-generate --accept-data-loss",
     "db:migrate": "npx prisma migrate dev --schema=./packages/db/prisma/schema.prisma",
+    "db:reset": "npx prisma migrate reset --schema=./packages/db/prisma/schema.prisma --force",
     "db:resolve": "npx prisma migrate resolve --schema=./packages/db/prisma/schema.prisma --applied 20240906204550_init",
     "db:deploy": "npx prisma migrate deploy --schema=./packages/db/prisma/schema.prisma",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
