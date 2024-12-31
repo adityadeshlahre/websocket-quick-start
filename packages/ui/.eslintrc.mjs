@@ -4,7 +4,7 @@ module.exports = {
   extends: ["@repo/eslint-config/react-internal.js"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: "./tsconfig.lint.json",
+    project: "./tsconfig.json",
     tsconfigRootDir: __dirname,
   },
   ignorePatterns: [
@@ -12,6 +12,6 @@ module.exports = {
     "tailwind.config.ts",
     "node_modules",
     ".eslintrc.cjs",
+    "./turbo/**/*",
   ],
-  parser: "@typescript-eslint/parser",
 };

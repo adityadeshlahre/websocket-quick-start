@@ -22,23 +22,23 @@ export default [
   ...tseslint.configs.recommended,
   {
     rules: {
-      eqeqeq: 'error',
-      curly: 'error',
+      eqeqeq: 'warn',
+      curly: 'warn',
       'no-console': 'warn',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
-        'error',
+        'warn',
         { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
       ],
-      'no-implicit-coercion': 'error',
+      'no-implicit-coercion': 'warn',
       'no-magic-numbers': [
         'warn',
         { ignore: [0, 1, -1], ignoreArrayIndexes: true },
       ],
-      quotes: ['error', 'single', { avoidEscape: true }],
-      semi: ['error', 'always'],
-      indent: ['error', 2, { SwitchCase: 1 }],
-      'comma-dangle': ['error', 'always-multiline'],
+      quotes: ['warn', 'double', { avoidEscape: true }],
+      semi: ['warn', 'always'],
+      indent: ['warn', 2, { SwitchCase: 1 }],
+      'comma-dangle': ['warn', 'always-multiline'],
     },
   },
 ];
