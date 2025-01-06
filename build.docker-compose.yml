@@ -3,16 +3,18 @@ services:
     build:
       context: .
       dockerfile: ./apps/web/Dockerfile.build
+      args:
+        DATABASE_URL: ${DATABASE_URL}
     image: quick-start-web:latest
     container_name: quick-start-web
-    env_file:
-      - .env
     expose:
       - 5173
     ports:
       - "5173:5173"
     volumes:
       - ./apps/web/:/app/apps/web
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
     networks:
       - app_network
 
@@ -20,16 +22,18 @@ services:
     build:
       context: .
       dockerfile: ./apps/server/Dockerfile.build
+      args:
+        DATABASE_URL: ${DATABASE_URL}
     image: quick-start-server:latest
     container_name: quick-start-server
-    env_file:
-      - .env
     expose:
       - 3000
     ports:
       - "3000:3000"
     volumes:
       - ./apps/server/:/app/apps/server
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
     networks:
       - app_network
 
