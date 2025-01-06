@@ -1,5 +1,7 @@
 FROM node:22-alpine AS base
 
+RUN apk add --no-cache openssl
+
 FROM base AS builder
 ENV PNPM_HOME="/root/.local/share/pnpm"
 ENV PATH="${PATH}:${PNPM_HOME}"
@@ -26,10 +28,12 @@ WORKDIR /app
 COPY .gitignore .gitignore
 COPY --from=builder /app/out/json/ .
 COPY --from=builder /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
+
+RUN corepack enable
+RUN pnpm i
+
 COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
-
-RUN pnpm i
 
 RUN pnpm turbo run build --filter=server...
 
@@ -40,18 +44,21 @@ ENV PATH="${PATH}:${PNPM_HOME}"
 
 RUN npm install --global pnpm@latest
 
-RUN pnpm add -g turbo concurrently nodemon dotenv dotenv-cli prisma
+RUN pnpm add -g turbo concurrently nodemon dotenv dotenv-cli prisma ts-node
 
 WORKDIR /app
 
-# Don't run production as root
-# RUN groupadd --system --gid 1001 nextjs
-# RUN useradd --system --uid 1001 nodejs
-# USER nodejs
+# COPY --from=installer /app/apps/server/package.json ./package.json
+
 COPY --from=installer /app .
+# COPY --from=installer /app/apps/server/dist ./dist/
 
 EXPOSE 3000
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+ENV NODE_ENV production
 
 CMD ["sh", "-c", "pnpm db:generate && pnpm db:migrate && pnpm db:deploy"]
 
-CMD ["sh", "-c", "cd apps/server && pnpm dev"]
+CMD ["sh", "-c", "cd apps/server && pnpm start"]
+# CMD ["sh", "-c", "pnpm start"]

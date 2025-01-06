@@ -10,15 +10,15 @@
     "dev:docker:build": "docker compose -f dev.docker-compose.yml build",
     "docker:build": "docker-compose -f docker-compose.yml build && docker compose -f dev.docker-compose.yml build",
     "lint": "turbo lint",
-    "db:generate": "npx prisma generate --schema=./packages/db/prisma/schema.prisma",
-    "db:studio": "npx prisma studio --schema=./packages/db/prisma/schema.prisma",
-    "db:push": "npx prisma db push --schema=./packages/db/prisma/schema.prisma --skip-generate --accept-data-loss",
-    "db:migrate": "npx prisma migrate dev --schema=./packages/db/prisma/schema.prisma",
-    "db:reset": "npx prisma migrate reset --schema=./packages/db/prisma/schema.prisma --force",
-    "db:resolve": "npx prisma migrate resolve --schema=./packages/db/prisma/schema.prisma --applied 20240906204550_init",
-    "db:deploy": "npx prisma migrate deploy --schema=./packages/db/prisma/schema.prisma",
+    "db:generate": "pnpx prisma generate --schema=./packages/db/prisma/schema.prisma",
+    "db:studio": "pnpx prisma studio --schema=./packages/db/prisma/schema.prisma",
+    "db:push": "pnpx prisma db push --schema=./packages/db/prisma/schema.prisma --skip-generate --accept-data-loss",
+    "db:migrate": "pnpx prisma migrate dev --schema=./packages/db/prisma/schema.prisma",
+    "db:reset": "pnpx prisma migrate reset --schema=./packages/db/prisma/schema.prisma --force",
+    "db:resolve": "pnpx prisma migrate resolve --schema=./packages/db/prisma/schema.prisma --applied 20240906204550_init",
+    "db:deploy": "pnpx prisma migrate deploy --schema=./packages/db/prisma/schema.prisma",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "rimraf ./node_modules ./packages/ui/node_modules ./apps/node_modules ./apps/server/node_modules ./apps/web/node_modules ./packages/db/node_modules ./packages/types/node_modules ./packages/tailwind-config/node_modules ./packages/eslint-config/node_modules",
+    "clean": "rimraf ./node_modules ./packages/ui/node_modules ./apps/server/node_modules ./apps/server/dist ./apps/web/node_modules ./apps/web/dist ./packages/db/node_modules ./packages/types/node_modules ./packages/tailwind-config/node_modules ./packages/eslint-config/node_modules",
     "prepare": "husky"
   },
   "devDependencies": {
@@ -34,7 +34,7 @@
     "turbo": "^2.3.3",
     "typescript": "^5.7.2"
   },
-  "packageManager": "pnpm@9.15.2",
+  "packageManager": "pnpm@9.15.3",
   "engines": {
     "node": ">=23"
   },
