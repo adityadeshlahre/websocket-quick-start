@@ -1,34 +1,33 @@
-import tsParser from "@typescript-eslint/parser";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
+// import js from "@eslint/js";
+// import tsParser from "@typescript-eslint/parser";
+// import path from "node:path";
+// import { fileURLToPath } from "node:url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
-});
+// const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export default [{
-    ignores: [
-        "**/postcss.config.js",
-        "**/tailwind.config.ts",
-        "**/node_modules",
-        "**/.eslintrc.cjs",
-        "./turbo/**/*",
-    ],
-}, ...compat.extends("@repo/eslint-config/react-internal.js"), {
-    languageOptions: {
-        parser: tsParser,
-        ecmaVersion: 5,
-        sourceType: "script",
+// export default [
+//   js.configs.recommended,
+//   {
+//     ignores: [
+//       "postcss.config.js",
+//       "tailwind.config.ts",
+//       "node_modules",
+//       ".eslintrc.cjs",
+//       "./turbo/**/*",
+//     ],
+//   },
+//   {
+//     languageOptions: {
+//       parser: tsParser,
+//       parserOptions: {
+//         project: "./tsconfig.json",
+//         tsconfigRootDir: __dirname,
+//       },
+//     },
+//   },
+// ];
 
-        parserOptions: {
-            project: "./tsconfig.json",
-            tsconfigRootDir: __dirname,
-        },
-    },
-}];
+import { config } from "@repo/eslint-config/react-internal";
+
+/** @type {import("eslint").Linter.Config} */
+export default config;
