@@ -22,19 +22,19 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9.18.0",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.23.0",
     "husky": "^9.1.7",
-    "postcss": "^8.5.1",
-    "prettier": "^3.4.2",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
     "rimraf": "^6.0.1",
-    "tailwindcss": "^3.4.17",
-    "turbo": "^2.3.3",
-    "typescript": "^5.7.3"
+    "tailwindcss": "^4.0.17",
+    "turbo": "^2.4.4",
+    "typescript": "^5.8.2"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.7.0",
   "engines": {
     "node": ">=23"
   },
