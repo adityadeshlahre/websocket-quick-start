@@ -1,5 +1,5 @@
 {
-  "name": "quick-start",
+  "name": "websocket-quick-start",
   "private": true,
   "scripts": {
     "build": "turbo build",
