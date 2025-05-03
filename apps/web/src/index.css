@@ -1,6 +1,9 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import 'tailwindcss'; */
 /* @import "@repo/ui/styles.css"; */
-@config '../tailwind.config.ts';
+/* @config '../tailwind.config.ts'; */
 
 /* @import '../tailwind.config.ts'; */
 
