@@ -6,6 +6,7 @@ on:
 
 jobs:
   build_images:
+    if: endsWith(github.actor, '[bot]')
     name: Build Docker images
     runs-on: ubuntu-latest
     steps:
